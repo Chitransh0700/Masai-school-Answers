@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation with Events</title>
+    <style>
+        .error-message {
+            color: red;
+            font-size: 12px;
+            display: none;
+        }
+        .input-field {
+            margin-bottom: 10px;
+        }
+
+        /* Add some basic styling to the form */
+#registration-form {
+    max-width: 300px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the input fields */
+  .input-field {
+    margin-bottom: 10px;
+  }
+  
+  .input-field label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-field input[type="text"], 
+  .input-field input[type="email"], 
+  .input-field input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Style the error messages */
+  .error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+  }
+  
+  /* Style the submit button */
+  #registration-form button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #registration-form button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Form Validation</h1>
+    <form id="registration-form">
+        <div class="input-field">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <div id="name-error" class="error-message">Name is required.</div>
+        </div>
+        <div class="input-field">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <div id="email-error" class="error-message">Please enter a valid email.</div>
+        </div>
+        <div class="input-field">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <div id="password-error" class="error-message">Password must be at least 8 characters long.</div>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
