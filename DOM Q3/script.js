@@ -53,6 +53,7 @@ function sortProductsByRating() {
     updateGraphs();
 }
 
+
 function clearInputs() {
     document.getElementById('product-name').value = '';
     document.getElementById('product-price').value = '';
